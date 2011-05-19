@@ -1,0 +1,20 @@
+url: http://www.thepia.com
+img_url: http://www.thepia.com/images
+title: Test Layouts
+description: The Personal Information Assistant.
+email: henrik@thepia.com
+analytics_id: UA-22749258-1
+    
+exclude: _design, README.textile, Rakefile
+destination: _site
+lsi: false
+pygments: true
+markdown: maruku
+permalink: pretty
+maruku:
+  use_tex: false
+  use_divs: false
+  png_dir: images/latex
+  png_url: /images/latex
+safe: false
+lessc: lessc
