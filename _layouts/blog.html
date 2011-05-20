@@ -1,6 +1,6 @@
 ---
 layout: master
-theme: main
+theme: blog
 ---
 
 	<header class="split-thirds">
@@ -32,7 +32,14 @@ theme: main
 
 		<div class="middle-third">
 			<div class="restricted-width">
-				<section>{% include lorem_ipsum.html %}</section>
+				<section>
+				  {% for post in site.posts %}
+				  <p>
+				    <a href="{{ post.url }}">{{ post.title }}</a>
+				    <time>{{ site.time }}</time>
+				  </p>
+				  {% endfor %}
+				</section>
 			</div>
 		</div>
 
