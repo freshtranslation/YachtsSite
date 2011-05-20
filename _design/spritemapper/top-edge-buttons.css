@@ -1,0 +1,48 @@
+/*
+  spritemapper.sprite_dirs = ./top-edge
+  spritemapper.output_css = top-edge-out.css
+*/
+
+.font-size {
+    width:32px;
+    height:32px;
+    background: url(top-edge/font-size.png);
+}
+.font-size-button {
+    width:32px;
+    height:32px;
+    background: url(top-edge/font-size-button.png);
+}
+
+.flip-theme-button {
+    width:32px;
+    height:32px;
+    background: url(top-edge/flip-theme-button.png);
+}
+.flip-theme {
+    width:32px;
+    height:32px;
+    background: url(top-edge/flip-theme.png);
+}
+
+.search-button {
+    width:32px;
+    height:32px;
+    background: url(top-edge/search-button.png);
+}
+.search-base {
+    width:32px;
+    height:32px;
+    background: url(top-edge/search.png);
+}
+
+.gears-button {
+    width:32px;
+    height:32px;
+    background: url(top-edge/gears-button.png);
+}
+.gears {
+    width:32px;
+    height:32px;
+    background: url(top-edge/gears.png);
+}

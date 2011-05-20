@@ -1,0 +1,28 @@
+/*
+  spritemapper.sprite_dirs = ./site
+  spritemapper.output_css = site-out.css
+*/
+
+.email-clear {
+    background: url('site.png') no-repeat -325px 0;
+}
+
+.facebook-logo {
+    background: url('site.png') no-repeat -130px 0;
+}
+
+.google-logo {
+    background: url('site.png') no-repeat -260px 0;
+}
+
+.linked-in {
+    background: url('site.png') no-repeat -65px 0;
+}
+
+.rss-clear {
+    background: url('site.png') no-repeat -195px 0;
+}
+
+.twitter-bird {
+    background: url('site.png') no-repeat 0 0;
+}

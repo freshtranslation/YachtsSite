@@ -1,0 +1,27 @@
+/*
+  
+  Awesome-Font!
+  Royalty-free handcrafted font, kerning avalible to select customers.
+  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z and space!
+
+  spritemapper.sprite_dirs = ../img/awesome-font
+  spritemapper.output_css = awesome.css
+*/
+
+.letter {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -999px;
+}
+
+.letter.space {
+  width: 18px; height: 20px;
+}
+.letter.a {
+  background: url(../img/awesome-font/a.png);
+  width: 22px; height: 17px;
+}
+.letter.b {
+  background: url(../img/awesome-font/b.png);
+  width: 15px; height: 17px;
+}

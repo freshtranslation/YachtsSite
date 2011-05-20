@@ -1,0 +1,46 @@
+/*
+  spritemapper.sprite_dirs = ./site
+  spritemapper.output_css = site-out.css
+*/
+
+.email-clear {
+    display: inline-block;
+    width:64px;
+    height:64px;
+    background: url(site/email-clear.png);
+}
+
+.facebook-logo {
+    display: inline-block;
+    width:64px;
+    height:64px;
+    background: url(site/facebook-logo.png);
+}
+
+.google-logo {
+    display: inline-block;
+    width:64px;
+    height:64px;
+    background: url(site/google-logo.png);
+}
+
+.linked-in {
+    display: inline-block;
+    width:64px;
+    height:64px;
+    background: url(site/linked-in.png);
+}
+
+.rss-clear {
+    display: inline-block;
+    width:64px;
+    height:64px;
+    background: url(site/rss-clear.png);
+}
+
+.twitter-bird {
+    display: inline-block;
+    width:64px;
+    height:64px;
+    background: url(site/twitter-bird.png);
+}
