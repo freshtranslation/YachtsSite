@@ -8,7 +8,8 @@ guesswho: itsme
 			
 <section class="posts"> 
 
-        <h1>
+		<div class="postbadge" style="position:relative;">
+			<address rel="location">{{ page.location }}</address>
 			<time class="postdate">
 				<!-- 
 				<span class="postweekday">{{ page.date | date: "%w" }}</span>
@@ -17,8 +18,9 @@ guesswho: itsme
 				<span class="postday">{{ page.date | date: "%d" }}</span>
 			</time>
 
-			<a href='{{page.url}}'>{{page.title}}</a>
-	</h1>
+		</div>
+		
+        <h1><a href='{{page.url}}'>{{page.title}}</a></h1>
 
 			<div class="postinfo">
 			    <span class="credit">by <a href="{{page.authorurl}}">{{page.author}}</a> on <time>{{page.date | date_to_string}}</time></span>

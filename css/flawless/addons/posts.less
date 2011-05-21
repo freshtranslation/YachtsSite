@@ -45,9 +45,21 @@
     li { list-style: none; margin-left: 0; padding-left:0; text-indent:0;}
     li { margin-top:3em; }
 
+    .postbadge {
+        // the thing in article flow within which postdate and address are placed
+        position: relative;
+        
+        address {
+            position: absolute;
+            left: e(%("-%spx",@left_overhang * 1.2));
+            width: @left_overhang * 1.2;
+            top: 50px;
+        }
+    }
+    
     .postdate {
         position:absolute;
-        left:0; //e(%("-%spx",@left_overhang));
+        left: e(%("-%spx",@left_overhang));
         width:41px;
         height:41px;
         background-image: url("/images/calendar24.gif");
@@ -58,6 +70,7 @@
         text-transform: uppercase;
         font-size: 14px;
         font-weight: bold;
+        line-height: 1;
         text-align: center;
         color:white;
     }
