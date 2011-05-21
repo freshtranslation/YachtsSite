@@ -181,7 +181,6 @@ article.main {
     
     .asides {
         color: @asides_color;
-        background-color: @asides_background_color;
 
         .restricted-width {
             .normal_list_rhythm();
@@ -202,14 +201,14 @@ article.main {
         	background-color: @aside2_background_color; /* add background color */
         }
 
-        .illustration {
-            position:absolute;
-            left:0; right:0;
-            height:100%;
-            background-image: url("/images/sitting-pencil-2.png");
-            background-position: bottom right;
-            background-repeat: no-repeat;
-        }
+    }
+    .asides-background {
+        position:absolute;
+        background-color: @asides_background_color;
+        height:100%;
+        background-image: url("/images/sitting-pencil-2.png");
+        background-position: bottom right;
+        background-repeat: no-repeat;
     }
 }
 
@@ -319,6 +318,10 @@ fieldset.search input[type=search] {
     background: url('/images/buttons/site.png') no-repeat 0 0;
 }
 
+.top-edge {
+    overflow: visible; /* Allow Page Menu NAV to underhang */
+}
+
 /* Top Edge buttons */
 .font-size {
     display:inline-block;
@@ -326,6 +329,7 @@ fieldset.search input[type=search] {
     height:32px;
     background: url('/images/buttons/top-edge.png') no-repeat -33px 0;
 }
+.font-size:hover,
 .font-size-button {
     display:inline-block;
     width:32px;
@@ -333,6 +337,7 @@ fieldset.search input[type=search] {
     background: url('/images/buttons/top-edge.png') no-repeat -99px 0;
 }
 
+.flip-theme:hover,
 .flip-theme-button {
     display:inline-block;
     width:32px;
