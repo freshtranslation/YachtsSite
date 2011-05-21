@@ -1,8 +1,8 @@
-url: http://www.thepia.com
-img_url: http://www.thepia.com/images
-title: Test Layouts
-description: The Personal Information Assistant.
-email: henrik@thepia.com
+url: http://freshtranslation.com
+img_url: http://freshtranslation.com/images
+title: Fresh Translation
+description: On a Quest to make Fresh Translations.
+email: katty@freshtranslation.com
 analytics_id: UA-22749258-1
     
 exclude: _design, README.textile, Rakefile
