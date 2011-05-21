@@ -2,7 +2,11 @@
 layout: blog
 guesswho: itsme
 ---
-    <div class="post">
+<article class="main split-thirds">
+	<div class="left-double sections normal-read">
+		<div class="restricted-width four-columns">
+<section> 
+
         <h1>
             <a href='{{page.url}}'>{{page.title}}</a></h1>
             <div class="date">
@@ -30,3 +34,12 @@ guesswho: itsme
         <li><a href='{{ post.url }}'>{{ post.title }}</a></li>
         {% endfor %}
     </ul>
+
+</section>
+</div></div> 
+<div class="right-third asides normal-read"><div class="illustration"></div><div class="restricted-width">
+<aside>{% include blog-sidebar.textile %}</aside>
+</div>
+<nav class="top-overhang"><ul><li><a class="active" href="#">Sidebar 1</a></li><li><a href="#">Sidebar 2</a></li><li><a href="#">Sidebar 3</a></li></ul></nav>
+</div>
+</article>
