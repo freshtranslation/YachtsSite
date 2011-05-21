@@ -1,10 +1,13 @@
-<fieldset><a href="http://linkedin.com/public/caterine.apruzesse" class="linked-in"></a><a href="http://facebook.com/caterine.apruzesse" class="facebook-logo"></a><a href="http://twitter.com/freshtranslation" class="twitter-bird" title="@freshtranslation"></a><a href="http://feedburner.com/freshtranslation/onaquest/" class="rss-clear" title="Subscribe to Blog"></a><a href="mailto:katty@freshtranslation.com" title="Email Fresh Translation" class="email-clear"></a> Sitemap/Archives
+<fieldset><a href="http://uk.linkedin.com/in/apruzzese" class="linked-in" title="Fresh Translation on LinkedIn"></a><a href="http://www.facebook.com/pages/Fresh-Translation-Right-Here-Inc/224427857583632" class="facebook-logo" title="Fresh Translation on Facebook"></a><a href="http://twitter.com/#!/freshtranslatio" class="twitter-bird" title="@freshtranslation"></a><a href="http://feedburner.com/freshtranslation/onaquest/" class="rss-clear" title="Subscribe to Blog"></a><a href="mailto:katty@freshtranslation.com" title="Email Fresh Translation" class="email-clear"></a> 
 </fieldset>
 
-<fieldset>
-<input type="search" name="search" placeholder="Search" style="font-size:20px; height:2em">
+<iframe src="http://www.facebook.com/plugins/like.php?app_id=176178315769197&amp;href=freshtranslation.com&amp;send=true&amp;layout=standard&amp;width=300&amp;show_faces=true&amp;action=like&amp;colorscheme=dark&amp;font=trebuchet+ms&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:80px;" allowTransparency="true"></iframe>
+<fieldset class="search">
+<input type="search" name="search" placeholder="Search"><button class="search-base"></button>
 News Personal On-A-Quest Comments Tweets
 </fieldset>
+
+
 
 h2. Recent Posts
 

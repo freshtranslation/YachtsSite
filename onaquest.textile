@@ -6,7 +6,7 @@ header_title: On A Quest
 <article class="main split-thirds">
 	<div class="left-double sections normal-read">
 		<div class="restricted-width four-columns">
-<section>
+<section> 
 
 h1. Title &mdash; h1
 
