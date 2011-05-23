@@ -95,7 +95,7 @@ max-width: 1175.0078px;
 margin-right: -104.3307px
 }
 .split-thirds .tripple-third .restricted-width header,.split-thirds .tripple-third .restricted-width section {
-padding-left: 64px
+padding-left: 80px
 }
 .split-thirds .tripple-third .restricted-width header.wide,.split-thirds .tripple-third .restricted-width section.wide {
 padding-left: 0
@@ -110,7 +110,7 @@ margin-left: -236.6615px;
 max-width: 800.9388px
 }
 .split-thirds .left-double .restricted-width header,.split-thirds .left-double .restricted-width section {
-padding-left: 64px;
+padding-left: 80px;
 margin-right: 14px;
 }
 .split-thirds .left-double .restricted-width header.wide,.split-thirds .left-double .restricted-width section.wide {
@@ -626,14 +626,15 @@ position: relative;
 text-align: center;
 overflow: hidden;
 left: 50%;
-margin-left: -438px;
-width: 876px;
+margin-left: -430px;
+width: 860px;
 margin-top: 20px;
 margin-bottom: .5em
 }
 footer .copyright img {
 margin-top: 10px;
-vertical-align: -4px
+vertical-align: -4px;
+padding-right: 5px
 }
 @media only screen and (max-width:1024px) and (min-width:768px) {.split-thirds {
 position: relative;
@@ -662,7 +663,7 @@ max-width: 816.3px;
 margin-right: -90.566px
 }
 .split-thirds .tripple-third .restricted-width header,.split-thirds .tripple-third .restricted-width section {
-padding-left: 64px
+padding-left: 80px
 }
 .split-thirds .tripple-third .restricted-width header.wide,.split-thirds .tripple-third .restricted-width section.wide {
 padding-left: 0
@@ -677,7 +678,7 @@ margin-left: -209.133px;
 max-width: 562.07px
 }
 .split-thirds .left-double .restricted-width header,.split-thirds .left-double .restricted-width section {
-padding-left: 64px;
+padding-left: 80px;
 margin-right: 14px;
 }
 .split-thirds .left-double .restricted-width header.wide,.split-thirds .left-double .restricted-width section.wide {
@@ -961,8 +962,8 @@ position: relative;
 text-align: center;
 overflow: hidden;
 left: 50%;
-margin-left: -376px;
-width: 752px;
+margin-left: -368px;
+width: 736px;
 margin-top: 20px;
 margin-bottom: .5em
 }
@@ -971,12 +972,6 @@ margin-top: 10px;
 vertical-align: -4px
 }
 
-}
-nav.page-menu {
-position: absolute;
-right: 0;
-top: 0;
-margin: 5px 8px
 }
 body {
 position: relative;
@@ -987,6 +982,34 @@ margin: 0;
 padding-top: .3em;
 text-align: left;
 overflow: hidden
+}
+.overhang-base {
+position: absolute
+}
+.left-overhang {
+position: absolute;
+left: -80px;
+width: 80px;
+text-align: center
+}
+.left-overhang address,.left-overhang time,.left-overhang label,.left-overhang output {
+margin: 0 auto
+}
+.left-overhang .vertical-text-100 {
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+transform: rotate(90deg);
+-ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+position: relative;
+line-height: 2;
+font-size: 1.15em;
+padding: 2px 8px;
+border: 1px solid #bbb;
+color: white;
+left: -8px;
+width: 100px
 }
 nav.top-overhang {
 zoom: 1;
@@ -1034,7 +1057,6 @@ left: 0
 }
 article.main {
 overflow: visible;
-min-height: 700px
 }
 article.main .restricted-width {
 padding-top: 10px;
@@ -1042,58 +1064,12 @@ padding-top: 10px;
 article.main .asides aside {
 margin-top: 10px
 }
-article.main .posts {
-margin: 0;
-}
-article.main .posts li {
-list-style: none;
-margin-left: 0;
-padding-left: 0;
-text-indent: 0
-}
-article.main .posts li {
-margin-top: 3em
-}
-article.main .posts .postdate {
-position: absolute;
-left: -64px;
-width: 41px;
-height: 41px;
-background-image: url("/images/calendar24.gif")
-}
-article.main .posts .postmonth {
-display: block;
-text-transform: uppercase;
-font-size: 14px;
-font-weight: bold;
-text-align: center;
-color: white
-}
-article.main .posts .postday {
-display: block;
-font-size: 18px;
-line-height: 1.5;
-text-align: center;
-color: #333
-}
-article.main .posts .info {
-whitespace: no-wrap
-}
-article.main .posts .info span {
-display: inline-block
-}
-article.main .posts .info a {
-text-decoration: none;
-font-weight: bold
-}
-article.main .posts h4 {
-font-family: 'CaviarDreamsRegular',Helvetica,sans-serif
-}
 .top-edge {
 position: absolute;
 top: 0;
 left: 0;
-width: 100%
+width: 100%;
+overflow: visible
 }
 .top-edge ul,.top-edge ol,.top-edge dl,.top-edge dialog {
 font-size: 13px;
