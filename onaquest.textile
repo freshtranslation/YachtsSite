@@ -1,24 +1,11 @@
 ---
-layout: blog
+layout: blog-frontpage
 title: On A Quest - Fresh Translation
 header_title: On A Quest
 ---
-<article class="main split-thirds">
-	<div class="left-double sections normal-read">
-		<div class="restricted-width four-columns">
-<section> 
-
 h1. Title &mdash; h1
 
 {% include lorem_ipsum.html %} 
 
 h2. Subtitle &mdash; h2
 
-</section>
-</div></div> 
-<div class="right-third asides normal-read"><div class="illustration"></div><div class="restricted-width">
-<aside>{% include blog-sidebar.textile %}</aside>
-</div>
-<nav class="top-overhang"><ul><li><a class="active" href="#">Sidebar 1</a></li><li><a href="#">Sidebar 2</a></li><li><a href="#">Sidebar 3</a></li></ul></nav>
-</div>
-</article>
