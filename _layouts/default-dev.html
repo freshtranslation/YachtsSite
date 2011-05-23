@@ -12,9 +12,7 @@
   <link rel="stylesheet" type="text/css" href="/css/twothirds.css" media="screen">
 -->
 
-  <link rel="stylesheet/less" type="text/css" href="/css/pale_serif.less" media="screen" title="pale_serif_css" alternate="Pale Serif">
-  <link rel="stylesheet/less" type="text/css" href="/css/night_sans.less" media="screen" title="night_sans_css" alternate="Night Sans">
-  <link rel="stylesheet/less" type="text/css" href="/css/twothirds/demo_theme.less" media="screen" title="demo_css" alternate="Demo Theme">
+	<link rel="stylesheet/less" type="text/css" href="/css/{{ page.theme }}.less" media="screen" title="theme_css" alternate="Theme">
 
 	<!-- baseline templ -->
 	<link type="text/css" rel="stylesheet" media="screen" href="/css/baseline/uncompressed/baseline.form.css">
@@ -82,21 +80,10 @@
 </footer>
 
 <div class="top-edge">
-	
-	<ul class="breadcrumb">
-	    <li class="home"><a href="/">HTML 5 Playground</a></li>
-		{% if page.folder %}
-	    <li class="folder"><a href="{{ page.folderurl }}">{{ page.folder }}</a></li>
-		{% endif %}
-	    <li><a href="." class="active">{{ page.header_title }}</a></li>
-	</ul>
-
 	{% include page_menu.html %}
-
 </div>
 	
 <div class="bottom-edge">
-	<a href="production">Development Version [swap]</a>
 </div>
 
   <!-- JavaScript -->

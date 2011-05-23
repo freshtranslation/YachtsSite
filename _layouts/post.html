@@ -1,36 +1,35 @@
 ---
 layout: blog
-guesswho: itsme
+folder: On A Quest
+folderurl: /onaquest/
 ---
 <article class="main split-thirds">
 	<div class="left-double sections normal-read">
 		<div class="restricted-width four-columns">
 			
-<section class="posts"> 
-
-		<div class="postbadge" style="position:relative;">
-			<address rel="location">{{ page.location }}</address>
+<header id="articletop">
+	<div class="overhang-base">
+		<div class="left-overhang postbadge">
 			<time class="postdate">
-				<!-- 
-				<span class="postweekday">{{ page.date | date: "%w" }}</span>
-				-->
-				<span class="postmonth">{{ page.date | date: "%b" }}</span>
 				<span class="postday">{{ page.date | date: "%d" }}</span>
+				<span class="postmonth">{{ page.date | date: "%b" }}</span>
+				<span class="postweekday">{{ page.date | date: "%A" }}</span>
 			</time>
+			<address rel="location">{{ page.location }}</address>
 
 		</div>
-		
-        <h1><a href='{{page.url}}'>{{page.title}}</a></h1>
+	</div>
 
-			<div class="postinfo">
-			    <span class="credit">by <a href="{{page.authorurl}}">{{page.author}}</a> on <time>{{page.date | date_to_string}}</time></span>
-			    <span class="links"><a href="#comments" class="comments-link">135 Comments</a></span>    
-			</div>
+<h1>{{ page.title }}</h1>
 
-            <div class="date">
-                
-                <a class="retweet" href="{{site.url}}{{page.url}}">{{page.title}}</a>
-            </div>
+<div class="postinfo">
+    <span class="credit">by <a href="{{ page.authorurl }}">{{ page.author }}</a></span>
+    <span class="links"><a href="#comments" class="comments-link">135 Comments</a></span>  
+  <span><a class="retweet" href="{{site.url}}{{page.url}}">{{page.title}}</a></span>
+</div>
+</header>
+
+<section> 
         {{ content }}
         
 {% if disqus_account %}
@@ -43,13 +42,13 @@ guesswho: itsme
     <ul>
         {% for post in site.related_posts limit:10 %}
         <li>
-			<time class="postdate">
-				<!-- 
-				<span class="postweekday">{{ page.date | date: "%w" }}</span>
-				-->
-				<span class="postmonth">{{ post.date | date: "%b" }}</span>
-				<span class="postday">{{ post.date | date: "%d" }}</span>
-			</time>
+			<div class="left-overhang postbadge">
+				<time class="postdate">
+					<span class="postday">{{ post.date | date: "%d" }}</span>
+					<span class="postmonth">{{ post.date | date: "%b" }}</span>
+				</time>
+			</div>
+
 			<a href='{{ post.url }}'>{{ post.title }}</a>
 	</li>
         {% endfor %}
