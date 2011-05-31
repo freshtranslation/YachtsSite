@@ -1,0 +1,81 @@
+/*
+  spritemapper.sprite_dirs = ./site
+  spritemapper.output_css = site-out-57.css
+*/
+
+.email-clear {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url('site-57.png') no-repeat -580px 0;
+}
+
+.facebook-logo {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url('site-57.png') no-repeat -406px 0;
+}
+
+.google-logo {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url('site-57.png') no-repeat 0 0;
+}
+
+.linked-in {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url('site-57.png') no-repeat -174px 0;
+}
+
+.rss-clear {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url('site-57.png') no-repeat -232px 0;
+}
+
+.twitter-bird {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url('site-57.png') no-repeat -522px 0;
+}
+
+.digg-clear {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url('site-57.png') no-repeat -464px 0;
+}
+
+.flickr-clear {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url('site-57.png') no-repeat -290px 0;
+}
+
+.star-clear {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url('site-57.png') no-repeat -58px 0;
+}
+
+.stumble-upon {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url('site-57.png') no-repeat -116px 0;
+}
+
+.network-clear {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url('site-57.png') no-repeat -348px 0;
+}

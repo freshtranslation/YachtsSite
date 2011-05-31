@@ -1,0 +1,81 @@
+/*
+  spritemapper.sprite_dirs = ./site
+  spritemapper.output_css = site-out-72.css
+*/
+
+.email-clear {
+    display: inline-block;
+    width:72px;
+    height:72px;
+    background: url(site-72/email-clear.png);
+}
+
+.facebook-logo {
+    display: inline-block;
+    width:72px;
+    height:72px;
+    background: url(site-72/facebook-logo.png);
+}
+
+.google-logo {
+    display: inline-block;
+    width:72px;
+    height:72px;
+    background: url(site-72/google-logo.png);
+}
+
+.linked-in {
+    display: inline-block;
+    width:72px;
+    height:72px;
+    background: url(site-72/linked-in.png);
+}
+
+.rss-clear {
+    display: inline-block;
+    width:72px;
+    height:72px;
+    background: url(site-72/rss-clear.png);
+}
+
+.twitter-bird {
+    display: inline-block;
+    width:72px;
+    height:72px;
+    background: url(site-72/twitter-bird.png);
+}
+
+.digg-clear {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    background: url(site-72/digg-clear.png);
+}
+
+.flickr-clear {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    background: url(site-72/flickr-clear.png);
+}
+
+.star-clear {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    background: url(site-72/star-clear.png);
+}
+
+.stumble-upon {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    background: url(site-72/stumble-upon.png);
+}
+
+.network-clear {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    background: url(site-72/network-clear.png);
+}
