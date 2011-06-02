@@ -22,14 +22,14 @@
 {% when 'production' %}
 
 	{% unless page.no_themes %}
-  <link rel="stylesheet" type="text/css" href="/css/{{ page.theme }}.css" media="screen" title="theme_css" alternate="Theme">
+  <link rel="stylesheet" type="text/css" href="/css/{{ page.theme }}.css" media="screen">
 	{% endunless %}
 
   {% include flawless_production.html %}
 {% when 'development' %}
 
 	{% unless page.no_themes %}
-  <link rel="stylesheet/less" type="text/css" href="/less/{{ page.theme }}.less" media="screen" title="theme_css" alternate="Theme">
+  <link rel="stylesheet/less" type="text/css" href="/less/{{ page.theme }}.less" media="screen" title="theme_css">
 	{% endunless %}
   {% include flawless_development.html %}
 {% endcase %}
