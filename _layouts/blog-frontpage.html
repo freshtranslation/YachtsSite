@@ -3,10 +3,10 @@ layout: blog
 folder: On A Quest
 folderurl: /onaquest/
 ---
-<article class="main split-thirds">
-	<div class="left-double sections normal-read">
-		<div class="restricted-width four-columns">
+<div class="main constrained">
+	<div class="thirds-content">
 			
+<article class="two-thirds">
 <header id="articletop">
 	<div class="overhang-base">
 		<div class="left-overhang postbadge">
@@ -55,11 +55,13 @@ folderurl: /onaquest/
     </ul>
 
 </section>
-</div></div> 
+</article> 
+
 <div class="right-third asides-background"></div>
-<div class="right-third asides normal-read"><div class="restricted-width">
-<aside>{% include blog-sidebar.textile %}</aside>
-</div>
-<nav class="top-overhang"><ul><li><a class="active" href="#">Sidebar 1</a></li><li><a href="#">Sidebar 2</a></li><li><a href="#">Sidebar 3</a></li></ul></nav>
-</div>
-</article>
+
+<aside class="third four-columns normal-read">
+	{% include blog-sidebar.textile %}
+</aside>
+
+
+</div></div>
