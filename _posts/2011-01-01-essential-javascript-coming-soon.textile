@@ -4,6 +4,7 @@ title: Essential JavaScript Coming Soon
 author: Henrik Vendelbo
 category:
   - onaquest
+summary: Later in the year I will add a great little library for making great web applications.
 ---
 Later in the year I will add a great little library for making great web applications.
 
