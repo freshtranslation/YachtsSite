@@ -1,41 +1,30 @@
 ---
-layout: default
+layout: master
+thirds: development
+flawless: development
+theme: blog
 ---
-
-<article class="main split-thirds">
-	<div class="left-double sections normal-read">
-		<div class="restricted-width four-columns">
-		
-
-{{ content }}
-
-
-	<!-- Article level navigation -->
-	<nav class="top-overhang">
-    	<ul>
-        	<li><a class="active" href="#">Article 1</a></li>
-            <li><a href="#">Article 2</a></li>
-            <li><a href="#">Article 3</a></li>
-            <li><a href="#">Article 4</a></li>
-            <li><a href="#">Article 5</a></li>
-        </ul>
-	</nav>
-	</div></div> <!-- right-third and restricted-width -->
-	
-	<div class="right-third asides-background"></div>
-	<div class="right-third asides normal-read">
-		<div class="restricted-width">
+{% unless page.no_header %}{% include page-header.html %}{% endunless %}
+<div class="main constrained">
+	<div class="thirds-content">
 			
-		<aside>{% include demo-sidebar.html %}</aside>
-	</div>
+		<article class="two-thirds normal-read four-columns">
+{% if page.wrap-section %}<section>{% endif %}
+{{ content }}
+{% if page.wrap-section %}</section>{% endif %}
+{% include article-nav.html %}
+		</article>
+		
+		<aside class="third normal-read two-columns">
+			{% include demo-sidebar.html %}
+			{% unless page.no_tabs %}{% include sidebar-nav.html %}{% endunless %}
+		</aside>
+</div></div> 
 
-	<!-- Aside level navigation -->
-	<nav class="top-overhang">
-    	<ul>
-        	<li><a class="active" href="#">Sidebar 1</a></li>
-            <li><a href="#">Sidebar 2</a></li>
-            <li><a href="#">Sidebar 3</a></li>
-        </ul>
-	</nav>
-	</div>
-</article>
+<footer class="constrained">
+	{% include page-footer-etc.html %}
+	{% if page.show_offset_info %}
+	<code class="info">Etc (<var data-parent-prop="offsetWidth"></var> x <var data-parent-prop="offsetHeight"></var>)</code>
+	{% endif %}
+	{% include page-footer-copyright.html %}
+</footer>

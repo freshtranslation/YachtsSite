@@ -3,15 +3,37 @@
 <head>
   {% include ipad_friendly_html5_head.html %}
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references 
-  <link rel="apple-touch-icon" href="">
-  -->
+{% case page.thirds  %}
+{% when 'production' %}
+  <link rel="stylesheet" type="text/css" href="/css/thirds.css" media="screen">
+{% when 'development' %}
+  <link rel="stylesheet/less" type="text/css" href="/less/thirds.less" media="screen" title="thirds_css"/>
+{% endcase %}
 
-  <link rel="stylesheet" type="text/css" href="/css/twothirds.css" media="screen">
+{% case page.fourths  %}
+{% when 'production' %}
+  <link rel="stylesheet" type="text/css" href="/css/fourths.css" media="screen">
+{% when 'development' %}
+  <link rel="stylesheet/less" type="text/css" href="/less/fourths.less" media="screen" title="fourths_css"/>
+{% endcase %}
 
-  <link rel="stylesheet/less" type="text/css" href="/css/{{ page.theme }}.less" media="screen" title="theme_css" alternate="Theme">
 
+{% case page.flawless  %}
+{% when 'production' %}
+
+	{% unless page.no_themes %}
+  <link rel="stylesheet" type="text/css" href="/css/{{ page.theme }}.css" media="screen" title="theme_css" alternate="Theme">
+	{% endunless %}
+
+  {% include flawless_production.html %}
+{% when 'development' %}
+
+	{% unless page.no_themes %}
+  <link rel="stylesheet/less" type="text/css" href="/less/{{ page.theme }}.less" media="screen" title="theme_css" alternate="Theme">
+	{% endunless %}
   {% include flawless_development.html %}
+{% endcase %}
+
   {% include css_browser_selector.html %}    
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
@@ -28,6 +50,28 @@
 
 {{ content }}
 
+{% unless page.no_top_edge %}
+<div class="top-edge">
+{% if top_edge_breadcrumb %}
+<ul class="breadcrumb">
+	<li class="home"><a href="/">HTML 5 Playground</a></li>
+	{% if page.folder %}<li class="folder"><a href="{{ page.folderurl }}">{{ page.folder }}</a></li>{% endif %}
+	<li><a href="." class="active">{{ page.header_title }}</a></li>
+</ul>
+{% endif %}
+
+{% include page-menu.html %}
+</div>
+{% endunless %}
+	
+{% unless page.no_top_edge %}
+<div class="bottom-edge">
+{% if bottom_swap_link %}
+{{ bottom_swap_link | textile }}
+{% endif %}	
+</div>
+{% endunless %}
+
   <!-- JavaScript -->
 
 {% if page.googlecdn %}
@@ -42,5 +86,13 @@
   <script type="text/javascript" src="/js/jQuery/jquery.styleswitch.js"></script>
   <script type="text/javascript" src="/js/jScrollPane-1.2.3.min.js"></script>
   <script type="text/javascript" src="/js/site.js"></script>
+
+  <script type="text/javascript" src="/js/jQuery/jquery.masonry.min.js"></script>
+<script> 
+	(function($){
+		$('.masonry100').masonry({ columnWidth: 100 });
+		$('.masonry1').masonry({ });
+	})(jQuery);
+</script>
 </body>
 </html>

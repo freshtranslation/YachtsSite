@@ -3,36 +3,37 @@ layout: blog
 folder: On A Quest
 folderurl: /onaquest/
 ---
-<article class="main split-thirds">
-	<div class="left-double sections normal-read">
-		<div class="restricted-width four-columns">
-			
-<header id="articletop">
-	<div class="overhang-base">
-		<div class="left-overhang postbadge">
-			<time class="postdate">
-				<span class="postday">{{ page.date | date: "%d" }}</span>
-				<span class="postmonth">{{ page.date | date: "%b" }}</span>
-				<span class="postweekday">{{ page.date | date: "%A" }}</span>
-			</time>
-			<address rel="location">{{ page.location }}</address>
+<div class="main constrained">
+	<div class="thirds-content">
+		
+<article class="two-thirds four-columns normal-read">
+				
+	<header id="articletop" class="with-overhang">
+		<div class="overhang-base">
+			<div class="left-overhang postbadge">
+				<time class="postdate">
+					<span class="postday">{{ page.date | date: "%d" }}</span>
+					<span class="postmonth">{{ page.date | date: "%b" }}</span>
+					<span class="postweekday">{{ page.date | date: "%A" }}</span>
+				</time>
+				<address rel="location">{{ page.location }}</address>
 
+			</div>
 		</div>
+
+	<h1>{{ page.title }}</h1>
+
+	<div class="postinfo">
+	    <span class="credit">by <a href="{{ page.authorurl }}">{{ page.author }}</a> on <time>{{ page.date }}</time></span>
+	    <span class="links"><a href="#comments" class="comments-link">135 Comments</a></span>    
 	</div>
+	</header>
 
-<h1>{{ page.title }}</h1>
-
-<div class="postinfo">
-    <span class="credit">by <a href="{{ page.authorurl }}">{{ page.author }}</a></span>
-    <span class="links"><a href="#comments" class="comments-link">135 Comments</a></span>  
-  <span><a class="retweet" href="{{site.url}}{{page.url}}">{{page.title}}</a></span>
-</div>
-</header>
-
-<section> 
-        {{ content }}
-        
-{% if disqus_account %}
+	<section class="with-overhang">
+{{ content }}
+    </section>
+<section>
+{% if site.disqus_account %}
         <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/{{ disqus_account }}/embed.js"></script><noscript><a href="http://{{ disqus_account }}.disqus.com/?url=ref">View comments.</a></noscript>
     </div>
 {% endif %}
@@ -42,24 +43,25 @@ folderurl: /onaquest/
     <ul>
         {% for post in site.related_posts limit:10 %}
         <li>
-			<div class="left-overhang postbadge">
-				<time class="postdate">
-					<span class="postday">{{ post.date | date: "%d" }}</span>
-					<span class="postmonth">{{ post.date | date: "%b" }}</span>
-				</time>
-			</div>
-
+			<time class="postdate">
+				<!-- 
+				<span class="postweekday">{{ page.date | date: "%w" }}</span>
+				-->
+				<span class="postmonth">{{ post.date | date: "%b" }}</span>
+				<span class="postday">{{ post.date | date: "%d" }}</span>
+			</time>
 			<a href='{{ post.url }}'>{{ post.title }}</a>
 	</li>
         {% endfor %}
     </ul>
 
 </section>
-</div></div> 
-<div class="right-third asides-background"></div>
-<div class="right-third asides normal-read"><div class="restricted-width">
-<aside>{% include blog-sidebar.textile %}</aside>
-</div>
-<nav class="top-overhang"><ul><li><a class="active" href="#">Sidebar 1</a></li><li><a href="#">Sidebar 2</a></li><li><a href="#">Sidebar 3</a></li></ul></nav>
-</div>
+
 </article>
+
+<aside class="third four-columns normal-read">
+	{% include blog-sidebar.textile %}
+</aside>
+	
+	
+</div></div>
