@@ -12,12 +12,10 @@ theme: main
 {% if page.wrap-section %}<section>{% endif %}
 {{ content }}
 {% if page.wrap-section %}</section>{% endif %}
-{% include article-nav.html %}
 		</article>
 		
 		<aside class="third normal-read two-columns">
 			{% include page-sidebar.html %}
-			{% unless page.no_tabs %}{% include sidebar-nav.html %}{% endunless %}
 		</aside>
 </div></div> 
 
