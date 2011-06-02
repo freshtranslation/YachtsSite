@@ -6,7 +6,6 @@
 <input name="search" placeholder="Search"><button class="search-base submit"></button>
 </fieldset>
 <hr>
-{% if site.related_posts %}
 <h2>Other Posts</h2>
 
 {% for post in site.related_posts limit:10 %}
@@ -21,5 +20,5 @@
 	<p>{{ post.summary | truncatewords:20 }}</p>
 </details>
 {% endfor %}
-{% endif %}
+
 
