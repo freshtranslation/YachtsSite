@@ -8,7 +8,15 @@
  * This way the framework can provide infinite features, without
  * adding anything more than you need on your website.
  */
-@import "flawless/loader.less";
+@import "../dev-time/flawless/css/flawless/core/production/framework.less";
+@import "../dev-time/css3-mixins/main.less";
+@import "addons.less";
+
+/* Tell the framework where it is relative to the html file  */
+@setup_framework_path: "dev-time/flawless/css/flawless/core/production";
+
+@setup_images_path: "images";
+@setup_resources_path: "css";
 
 .font-face('CaviarDreamsRegular','/fonts/CaviarDreams-webfont','webfontdHSnsI35');
 
@@ -20,11 +28,13 @@
 @bottom-edge-height: 20px;
 @page-menu-button-width: 32px;
 @page-menu-button-height: 32px;
-@sidebar-button-width: 64px;
-@sidebar-button-height: 64px;
+@sidebar-button-width: 48px;
+@sidebar-button-height: 48px;
 
 @article_aside1_height: 250px;
 @article_aside2_height: 250px;
+@etc_height: 275px;
+@left_overhang: 80px; 
 
 /**
  * Typefaces
@@ -43,6 +53,7 @@
 @regular_anchor_hover_color: #036;
 @figure-background-color: white;
 @figure-border: 1px solid #ccc;
+@shadow-color: #999;
 
 /**
  * Specific parameters
@@ -51,7 +62,8 @@
 
 @nav_background_color: transparent;
 @overhang_background_color: @nav_background_color;
-@article_background_color: #FFFFF8;
+@article_background_color: transparent;
+@main_background: #FFFFF8;
 
 @code_background_color: #666;
 @code_color: #aaa;
@@ -108,6 +120,9 @@
  */
 @theme_font_size: 13;
 
+/* Tell the framework where it is relative to the html file  */
+@setup_resources_path: "css";
+
 
 body {
     /** Define vertical rythm of text in normal/light/dense read areas */
@@ -129,155 +144,167 @@ body {
 	.regular_body_theme(@body-family, @heading-family, @regular-color, @alternate-color, url(/images/dashed_line_1px_grey.png));
     .regular_anchor_theme(@regular_anchor_color, @regular_anchor_hover_color);
 	.regular_inline_flow(@mark_background, @code-family, @title_underline_color);
-	
+
+    h1,h2 {
+        text-shadow: 0 1px 1px @shadow-color;
+    }
+    
+    > header {
+        padding-top: .3em;
+        text-align:left;
+        padding-top: @top-edge-height;
+        height: @header_height;
+        background-color: @page_header_background_color;
+        // blog theme changed
+
+        h1 {
+            text-indent: -1000px;
+            margin-top: e(%("-%spx",@top-edge-height));
+            background-image: url("/images/Objective.png");
+            background-repeat: no-repeat;
+            margin-left:-70px;
+            height:200px;
+        }
+    }
+
+    > footer {
+    
+        border-top: 3px solid #666;
+        padding-bottom: @bottom-edge-height;
+    
+        .regular_inline_flow(@page_footer_mark_background, @code-family, @page_footer_title_underline_color); 
+        .regular_figure_theme(@article_figure_background_color,@article_figure_border);
+        .regular_table_theme(@table-border-color,@table-odd-background);          
+    
+
+        footer .copyright {
+            font-size: 10px;
+            color: @copyright_color;
+
+            a {
+                color: @copyright_anchor_color;
+                text-decoration: none;
+                font-weight: bold;
+                &:active {
+                    color: white;
+                    background: black;
+                }
+            }
+            img {
+                margin-top: 10px;
+                vertical-align: -4px;
+                padding-right: 5px;
+            }
+        }
+
+        
+    } 
+}
+
+section,
+.with-link-hints {
     .theme_external_link(2px, "/images/external-http.png", 12px, 0px, right);
     .theme_external_email(2px, "/images/external-http.png", 12px, 0px, right);
 }
 
-body > header {
-    height: @header_height;
-    background-color: @page_header_background_color;
-    overflow: visible;
-    z-index: 10;
+.main {
+    background: @main_background;
+}
 
-    .restricted-width {
-        padding-top: @top-edge-height;
+footer .etc {
+    min-height: @etc_height;
+    
+    color: @etc_color;
+
+    section {
+        padding-top: 10px;
     }
-    h1 {
-        text-indent: -1000px;
-        margin-top: e(%("-%spx",@top-edge-height));
-        background-image: url("/images/Objective.png");
-        background-repeat: no-repeat;
-        margin-left:-70px;
-        height:200px;
+    
+    a {
+        color: @etc_color;
+    }
+    
+    .posts h6 a {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: white;
     }
 }
 
-nav.top-overhang {
-	/* these are the colors for the states - normal, hover, active */
-	.nav_background(#E3E3E3, @nav_background_color, @nav_background_color);
-	.nav_text_color(black, black, black);
+section, article aside {
+    
+    .normal_list_rhythm();
+    .regular_list_theme();
 }
 
-article.main {
-
-    min-height:@article_aside1_height + @article_aside2_height;
-
-    /* themed */
+article {
     color: @article_color;
     background-color: @article_background_color;
     
-    .sections {
-        
-        header, footer, section {
-            .normal_list_rhythm();
-            .regular_list_theme();
-            .regular_inline_flow(@article_mark_background, @code-family, @article_title_underline_color); 
-            .regular_figure_theme(@article_figure_background_color,@article_figure_border);
-            .regular_table_theme(@table-border-color,@table-odd-background);            
-        }
-        
-        .postbadge {
-            .post_badge();
-        }
-
-        header {
-            .postinfo {
-                .posts_info();
-            }
-        }    
-        
-        section.comments {
-            .comments_gradient_background_theme(@article_background_color,1px solid #bbb)
-        }
-        
-        @overhang-size: 80px;
-        .overhang-badge {
-            position:absolute;
-            width: @overhang-size;
-            left: ;
-        }
-    }
+    //.regular_blob_theme(#333, #F4F4F4, #DEDEDE); 
+    .regular_quotes_theme(#e0e0e0,@shadow-color,40px);
     
-    .asides {
-        color: @asides_color;
-
-        .restricted-width {
-            .normal_list_rhythm();
-            .regular_list_theme();
-            .regular_inline_flow(@asides_mark_background, @code-family, @asides_title_underline_color); 
-            .regular_figure_theme(@article_figure_background_color,@article_figure_border);
-            .regular_table_theme(@table-border-color,@table-odd-background);            
-        }
-
-        aside {
-        }
-        
-        aside.sidebar-1 {
-        	background-color: @aside1_background_color; /* add background color */
-        }
-
-        aside.sidebar-2 {
-        	background-color: @aside2_background_color; /* add background color */
-        }
-
+    .overhang-base {
+        .overhang_base();
     }
-    .asides-background {
-        position:absolute;
-        background-color: @asides_background_color;
-        height:100%;
-        background-image: url("/images/sitting-pencil-2.png");
-        background-position: bottom right;
-        background-repeat: no-repeat;
+    .left-overhang {
+        .left_overhang();
     }
+
+    &.with-overhang, .with-overhang {
+        padding-left: @left_overhang;
+    }
+}
+
+.thirds-content > aside,
+.fourths-content > aside,
+.content > aside {
+    color: @asides_color;
+    background-color: @asides_background_color;
+
+}
+aside.sidebar-1 {
+	background-color: @aside1_background_color; /* add background color */
+}
+
+aside.sidebar-2 {
+	background-color: @aside2_background_color; /* add background color */
+}
+.asides-background {
+    position:absolute;
+    background-color: @asides_background_color;
+    height:100%;
+    background-image: url("/images/sitting-pencil-2.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
 }
 
 article.main {
     h1 a { text-decoration: none; }
 }
 
-
-
-body > footer {
-    
-    border-top: 3px solid #666;
-    padding-bottom: @bottom-edge-height;
-    
-    .normal_list_rhythm();
-    .regular_list_theme();
-    .regular_inline_flow(@page_footer_mark_background, @code-family, @page_footer_title_underline_color); 
+article header, article footer, article aside, section {
+    .regular_inline_flow(@article_mark_background, @code-family, @article_title_underline_color); 
     .regular_figure_theme(@article_figure_background_color,@article_figure_border);
-    .regular_table_theme(@table-border-color,@table-odd-background);            
-    
-} 
+    .regular_table_theme(@table-border-color,@table-odd-background);   
 
-footer .etc {
-    
-    color: @etc_color;
-
-    a {
-        color: @etc_color;
-    }
-    
-    .restricted-width {
-        margin-top: 20px;
+    .postbadge {
+        .post_badge();
     }
 }
 
-footer .copyright {
-    font-size: 10px;
-    color: @copyright_color;
-
-    a {
-        color: @copyright_anchor_color;
-        text-decoration: none;
-        font-weight: bold;
-        &:active {
-            color: white;
-            background: black;
-        }
+article header {
+    .postinfo {
+        .posts_info();
     }
+}    
+
+section.comments {
+    .comments_gradient_background_theme(@article_background_color,1px solid #bbb)
 }
+
+
 
 blockquote {
     font-family: @blockquote-family;
@@ -293,12 +320,16 @@ nav.page-menu {
 
 
 /* Sidebar Site buttons */
-body article .asides fieldset {
+aside fieldset {
     
-    .sidebar_buttons(@sidebar-button-width, @sidebar-button-height, url('/images/buttons/site.png'))
+    .sidebar_buttons(@sidebar-button-width, @sidebar-button-height, url('/images/buttons/site-48.png'))
 }
 
-body article .asides fieldset.search {
+body aside fieldset.search {
     .sidebar_search_fieldset(@page-menu-button-width, @page-menu-button-height, url('/images/buttons/top-edge.png'));
+}
+
+.tri-posts details {
+    padding: 15px 25px 25px 25px;
 }
 

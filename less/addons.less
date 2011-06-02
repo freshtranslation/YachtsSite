@@ -1,0 +1,44 @@
+/* INSTALL ADDONS
+ * Here you can add imports to install addons that
+ * reside in subfolders of the addons folder. This
+ * enables everyone to write addons to the framework
+ * and easy installation for the end user.
+ */
+
+.opacity(@fraction) {
+     -moz-opacity: @fraction; 
+     filter: e(%("alpha(opacity=%s)",100 * @fraction)); 
+     opacity: @fraction;
+}
+
+@import "addons/debug.less";
+@import "addons/nav/install.less";
+@import "addons/orientation.less";
+@import "addons/divide_width.less";
+@import "addons/posts.less"; /* TODO make macro */
+@import "addons/forms.less";
+
+@import "addons/type/fonts.less";
+
+/**
+ * Text syntax highlights and general formatting
+ */
+@import "addons/type/typography.less";
+/*@import "addons/text/syntax.less";
+@import "addons/text/pygments.less";
+*/
+ 
+/**
+ * jQuery plugin styling support
+ */
+@import "addons/jQuery/jScrollPane.less";
+@import "addons/jQuery/jquery.fancybox.less";
+@import "addons/jQuery/jquery.tweet.less";
+
+/**
+ * Theming
+ */
+@import "addons/theme/install.less";
+/*
+*/
+
