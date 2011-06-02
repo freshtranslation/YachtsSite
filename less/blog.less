@@ -24,7 +24,7 @@
  * Sizes
  */
 @top-edge-height: 20px;
-@header_height: 125px;
+@header_height: 190px;
 @bottom-edge-height: 20px;
 @page-menu-button-width: 32px;
 @page-menu-button-height: 32px;
@@ -35,6 +35,7 @@
 @article_aside2_height: 250px;
 @etc_height: 275px;
 @left_overhang: 80px; 
+@main_article_top_overlap: 75px;
 
 /**
  * Typefaces
@@ -211,6 +212,10 @@ section,
 .main {
     background: @main_background;
     h1 a { text-decoration: none; }
+    
+    article {
+        margin-top: e(%("-%spx",@main_article_top_overlap));
+    }
 }
 
 footer .etc {
