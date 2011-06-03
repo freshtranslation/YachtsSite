@@ -8,7 +8,15 @@
  * This way the framework can provide infinite features, without
  * adding anything more than you need on your website.
  */
-@import "flawless/loader.less";
+@import "../dev-time/flawless/css/flawless/core/production/framework.less";
+@import "../dev-time/css3-mixins/main.less";
+@import "addons.less";
+
+/* Tell the framework where it is relative to the html file  */
+@setup_framework_path: "dev-time/flawless/css/flawless/core/production";
+
+@setup_images_path: "images";
+@setup_resources_path: "css";
 
 .font-face('CaviarDreamsRegular','/fonts/CaviarDreams-webfont','webfontdHSnsI35');
 
@@ -16,8 +24,18 @@
  * Sizes
  */
 @top-edge-height: 20px;
-@header_height: 80px;
+@header_height: 190px;
 @bottom-edge-height: 20px;
+@page-menu-button-width: 32px;
+@page-menu-button-height: 32px;
+@sidebar-button-width: 48px;
+@sidebar-button-height: 48px;
+
+@article_aside1_height: 250px;
+@article_aside2_height: 250px;
+@etc_height: 275px;
+@left_overhang: 80px; 
+@main_article_top_overlap: 0px;
 
 /**
  * Typefaces
@@ -28,23 +46,31 @@
 
 /**
  * Colors
+ *
+ * lime scheme: http://colorschemedesigner.com/#2h11Tw0w0w0w0
+ * AEF100  8FB52D  719D00  C4F83E  D2F870
  */
 
 @regular-color: #333;
-@alternate-color: #036;
+@alternate-color: @army-color; //#036;
 @regular_anchor_color: @pink-color;
 @regular_anchor_hover_color: #036;
 @figure-background-color: white;
 @figure-border: 1px solid #ccc;
+@shadow-color: #999;
 
 /**
  * Specific parameters
  */
-@page_header_background_color: white;
+@page_header_background_color: #C4F83E;
+
+@intro_background_color: #C4F83E;
 
 @nav_background_color: transparent;
 @overhang_background_color: @nav_background_color;
-@article_background_color: #e8e8e8;
+@article_background_color: transparent;
+@effective_article_background_color: #fff;
+@main_background: #fff;
 
 @code_background_color: #666;
 @code_color: #aaa;
@@ -63,14 +89,14 @@
 @asides_mark_background: @mark_background;
 @asides_title_underline_color: @title_underline_color;
 
-@asides_background_color: #ddd;
+@asides_background_color: #FFFFF8;
 @aside1_background_color: @asides_background_color;
 @aside2_background_color: @asides_background_color;
 
 @page_footer_mark_background: @mark_background;
 @page_footer_title_underline_color: @title_underline_color;
 
-@page_footer_background_color: #ddeeee;
+@page_footer_background_color: #D2F870;
 @page_footer_color: @regular-color;
 @page_footer_anchor_color: @regular_anchor_color;
 
@@ -78,7 +104,7 @@
 @etc_anchor_color: lighten(@page_footer_anchor_color,10%);
 
 @copyright_color: lighten(@page_footer_color,20%); 
-@copyright_anchor_color: lighten(@page_footer_anchor_color,20%); 
+@copyright_anchor_color: black; 
 
 @page_background_color: @page_footer_background_color;
 
@@ -101,6 +127,9 @@
  */
 @theme_font_size: 13;
 
+/* Tell the framework where it is relative to the html file  */
+@setup_resources_path: "css";
+
 
 body {
     /** Define vertical rythm of text in normal/light/dense read areas */
@@ -122,116 +151,214 @@ body {
 	.regular_body_theme(@body-family, @heading-family, @regular-color, @alternate-color, url(/images/dashed_line_1px_grey.png));
     .regular_anchor_theme(@regular_anchor_color, @regular_anchor_hover_color);
 	.regular_inline_flow(@mark_background, @code-family, @title_underline_color);
-	
-    .type_external_link(5px, "/images/externals/pink");
-}
 
-body > header {
-    padding-top: @top-edge-height;
-    height: @header_height;
-    background-color: @page_header_background_color;
-}
-
-nav.top-overhang {
-	/* these are the colors for the states - normal, hover, active */
-	.nav_background(#E3E3E3, @nav_background_color, @nav_background_color);
-	.nav_text_color(black, black, black);
-}
-
-article.main {
-
-    /* themed */
-    color: @article_color;
-    background-color: @article_background_color;
-    
-    .sections {
-        
-        header, footer, section {
-            .normal_list_rhythm();
-            .regular_list_theme();
-            .regular_inline_flow(@article_mark_background, @code-family, @article_title_underline_color); 
-            .regular_figure_theme(@article_figure_background_color,@article_figure_border);
-            .regular_table_theme(@table-border-color,@table-odd-background);            
-        }
-        
-        header {
-            .postinfo {
-                .posts_info();
-            }
-        }    
-        
-        section.comments {
-            .comments_gradient_background_theme(@article_background_color,1px solid #bbb)
-        }
+    h1,h2 {
+        text-shadow: 0 1px 1px @shadow-color;
     }
     
-    .asides {
-        color: @asides_color;
-        background-color: @asides_background_color;
+    > header {
+        padding-top: .3em;
+        text-align:left;
+        padding-top: @top-edge-height;
+        height: @header_height;
+        background-color: @page_header_background_color;
+        // blog theme changed
 
-        .restricted-width {
-            .normal_list_rhythm();
-            .regular_list_theme();
-            .regular_inline_flow(@asides_mark_background, @code-family, @asides_title_underline_color); 
-            .regular_figure_theme(@article_figure_background_color,@article_figure_border);
-            .regular_table_theme(@table-border-color,@table-odd-background);            
-        }
-
-        aside {
-        }
-        
-        aside.sidebar-1 {
-        	background-color: @aside1_background_color; /* add background color */
-        }
-
-        aside.sidebar-2 {
-        	background-color: @aside2_background_color; /* add background color */
-        }
-
-        .illustration {
-            position:absolute;
-            left:0; right:0;
-            height:100%;
-            background-image: url("/images/sitting-pencil-2.png");
-            background-position: bottom right;
+        h1 {
+            text-indent: -1000px;
+            margin-top: e(%("-%spx",@top-edge-height));
+            background-image: url("/images/Objective.png");
             background-repeat: no-repeat;
+            margin-left:-70px;
+            height:200px;
         }
     }
+
+    > footer {
+    
+        border-top: 3px solid #666;
+        padding-bottom: @bottom-edge-height;
+    
+        .regular_inline_flow(@page_footer_mark_background, @code-family, @page_footer_title_underline_color); 
+        .regular_figure_theme(@article_figure_background_color,@article_figure_border);
+        .regular_table_theme(@table-border-color,@table-odd-background);          
+    
+
+        .copyright {
+            font-size: 10px;
+            color: @copyright_color;
+
+            a {
+                color: @copyright_anchor_color;
+                text-decoration: none;
+                font-weight: bold;
+                &:active {
+                    color: white;
+                    background: black;
+                }
+            }
+            img {
+                margin-top: 10px;
+                vertical-align: -4px;
+                padding-right: 5px;
+            }
+        }
+
+        
+    } 
 }
 
-body > footer {
+section,
+.with-link-hints {
+    .theme_external_link(2px, "/images/external-http.png", 12px, 0px, right);
+    .theme_external_email(2px, "/images/external-http.png", 12px, 0px, right);
+}
+
+.intro {
+    background: @intro_background_color;
+}
+
+.main {
+    background: @main_background;
+    .content article, .content aside {
+        color: #8FB52D;
+    }
+    h1 a { text-decoration: none; }
     
-    padding-bottom: @bottom-edge-height;
-    
-    .normal_list_rhythm();
-    .regular_list_theme();
-    .regular_inline_flow(@page_footer_mark_background, @code-family, @page_footer_title_underline_color); 
-    .regular_figure_theme(@article_figure_background_color,@article_figure_border);
-    .regular_table_theme(@table-border-color,@table-odd-background);            
-    
-} 
+    article {
+        margin-top: e(%("-%spx",@main_article_top_overlap));
+    }
+}
 
 footer .etc {
+    min-height: @etc_height;
     
     color: @etc_color;
 
+    section {
+        padding-top: 10px;
+    }
+    
     a {
         color: @etc_color;
     }
-}
-
-footer .copyright {
-    font-size: 10px;
-    color: @copyright_color;
-
-    a {
-        color: @copyright_anchor_color;
+    
+    .posts h6 a {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: white;
     }
 }
+
+section, article aside, .links-bar {
+    
+    .normal_list_rhythm();
+    .regular_list_theme();
+}
+
+article {
+    color: @article_color;
+    background-color: @article_background_color;
+    
+    //.regular_blob_theme(#333, #F4F4F4, #DEDEDE); 
+    .regular_quotes_theme(#e0e0e0,@shadow-color,40px);
+    
+    .overhang-base {
+        .overhang_base();
+    }
+    .left-overhang {
+        .left_overhang();
+    }
+
+    &.with-overhang, .with-overhang {
+        padding-left: @left_overhang;
+    }
+}
+
+.thirds-content > aside,
+.fourths-content > aside,
+.content > aside {
+    color: @asides_color;
+    background-color: @asides_background_color;
+
+}
+aside.sidebar-1 {
+	background-color: @aside1_background_color; /* add background color */
+}
+
+aside.sidebar-2 {
+	background-color: @aside2_background_color; /* add background color */
+}
+.asides-background {
+    position:absolute;
+    background-color: @asides_background_color;
+    height:100%;
+    background-image: url("/images/sitting-pencil-2.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+article header, article footer, article aside, section {
+    .regular_inline_flow(@article_mark_background, @code-family, @article_title_underline_color); 
+    .regular_figure_theme(@article_figure_background_color,@article_figure_border);
+    .regular_table_theme(@table-border-color,@table-odd-background);   
+
+    .postbadge {
+        .post_badge();
+    }
+}
+
+article header {
+    .postinfo {
+        .posts_info();
+    }
+}    
+
+
+section.comments {
+    .comments_gradient_background_theme(@effective_article_background_color,1px solid #bbb)
+}
+
+
 
 blockquote {
     font-family: @blockquote-family;
 }
 
 .no-debug-styles();
+
+/* Top Edge buttons */
+nav.page-menu {
+    
+    .regular_page_menu(@page-menu-button-width, @page-menu-button-height, url('/images/buttons/top-edge.png'));
+}
+
+.links-bar {
+    background: @main_background;
+    ul.breadcrumb a {
+        color: darken(@main_background,20%);
+    }
+}
+.links-bar:hover {
+    background: black;
+    ul.breadcrumb a {
+        color: white;
+    }
+    .opacity(.5);
+}
+
+/* Sidebar Site buttons */
+aside fieldset {
+    
+    .sidebar_buttons(@sidebar-button-width, @sidebar-button-height, url('/images/buttons/site-48.png'))
+}
+
+body aside fieldset.search {
+    .sidebar_search_fieldset(@page-menu-button-width, @page-menu-button-height, url('/images/buttons/top-edge.png'));
+}
+
+.tri-posts details {
+    padding: 15px 25px 25px 25px;
+}
 
