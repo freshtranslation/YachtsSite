@@ -1,7 +1,7 @@
 ---
 layout: blog-frontpage
-thirds: production
-flawless: production
+thirds: development
+flawless: development
 title: On A Quest - Fresh Translation
 header_title: On A Quest
 ---

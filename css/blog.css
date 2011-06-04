@@ -113,7 +113,7 @@ section,article aside,.links-bar{}section ul,article aside ul,.links-bar ul,sect
 section li ul,article aside li ul,.links-bar li ul,section li ol,article aside li ol,.links-bar li ol,section ul ul,article aside ul ul,.links-bar ul ul,section ol ol,article aside ol ol,.links-bar ol ol{top:0;margin-top:0;margin-bottom:0;}
 section li h1,article aside li h1,.links-bar li h1,section li h2,article aside li h2,.links-bar li h2,section li h3,article aside li h3,.links-bar li h3,section li h4,article aside li h4,.links-bar li h4,section li h5,article aside li h5,.links-bar li h5,section li h6,article aside li h6,.links-bar li h6,section li p,article aside li p,.links-bar li p{top:0;}
 section dd,article aside dd,.links-bar dd{margin-bottom:1em;}
-section ul.breadcrumb,article aside ul.breadcrumb,.links-bar ul.breadcrumb{display:block;list-style:none;margin:0;}section ul.breadcrumb li,article aside ul.breadcrumb li,.links-bar ul.breadcrumb li{display:inline-block;}section ul.breadcrumb li a,article aside ul.breadcrumb li a,.links-bar ul.breadcrumb li a{text-decoration:none;font-weight:bold;color:white;}
+section ul.breadcrumb,article aside ul.breadcrumb,.links-bar ul.breadcrumb{display:inline;list-style:none;margin:0;}section ul.breadcrumb li,article aside ul.breadcrumb li,.links-bar ul.breadcrumb li{display:inline-block;}section ul.breadcrumb li a,article aside ul.breadcrumb li a,.links-bar ul.breadcrumb li a{text-decoration:none;font-weight:bold;color:white;}
 section ul.breadcrumb li :after,article aside ul.breadcrumb li :after,.links-bar ul.breadcrumb li :after{content:" > ";}
 section dt,article aside dt,.links-bar dt{font-weight:bold;}
 section dd,article aside dd,.links-bar dd{margin-left:2em;}
