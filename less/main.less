@@ -24,7 +24,7 @@
  * Sizes
  */
 @top-edge-height: 20px;
-@header_height: 190px;
+@header_height: 110px;
 @bottom-edge-height: 20px;
 @page-menu-button-width: 32px;
 @page-menu-button-height: 32px;
@@ -62,15 +62,15 @@
 /**
  * Specific parameters
  */
-@page_header_background_color: #C4F83E;
+@page_header_background_color: #D2F870;
 
-@intro_background_color: #C4F83E;
+@intro_background_color: #D2F870;
 
 @nav_background_color: transparent;
 @overhang_background_color: @nav_background_color;
 @article_background_color: transparent;
-@effective_article_background_color: #fff;
-@main_background: #fff;
+@effective_article_background_color: #D2F870;
+@main_background: #D2F870;
 
 @code_background_color: #666;
 @code_color: #aaa;
@@ -89,22 +89,23 @@
 @asides_mark_background: @mark_background;
 @asides_title_underline_color: @title_underline_color;
 
-@asides_background_color: #FFFFF8;
+@asides_background_color: @article_background_color;
 @aside1_background_color: @asides_background_color;
 @aside2_background_color: @asides_background_color;
 
 @page_footer_mark_background: @mark_background;
 @page_footer_title_underline_color: @title_underline_color;
 
-@page_footer_background_color: #D2F870;
+@page_footer_background_color: #222;
 @page_footer_color: @regular-color;
 @page_footer_anchor_color: @regular_anchor_color;
 
 @etc_color: lighten(@page_footer_color,10%); 
 @etc_anchor_color: lighten(@page_footer_anchor_color,10%);
+@etc_button_color: #AEF100;
 
 @copyright_color: lighten(@page_footer_color,20%); 
-@copyright_anchor_color: black; 
+@copyright_anchor_color: darken(#fff,20%); 
 
 @page_background_color: @page_footer_background_color;
 
@@ -147,6 +148,7 @@ body {
     }
 
     background-color: @page_background_color;
+    background-image: url("/images/bg.png");
 	/* this adds the standard typography theme with custom families and colors */
 	.regular_body_theme(@body-family, @heading-family, @regular-color, @alternate-color, url(/images/dashed_line_1px_grey.png));
     .regular_anchor_theme(@regular_anchor_color, @regular_anchor_hover_color);
@@ -165,12 +167,16 @@ body {
         // blog theme changed
 
         h1 {
-            text-indent: -1000px;
-            margin-top: e(%("-%spx",@top-edge-height));
-            background-image: url("/images/Objective.png");
+            background-image: url("/images/quill-logo.png");
             background-repeat: no-repeat;
-            margin-left:-70px;
-            height:200px;
+            text-indent: -1000px;
+/*            
+margin-left:-70px;
+margin-top: e(%("-%spx",@top-edge-height));
+*/            
+            height:120px;
+            top: -10px;
+            left: -10px;
         }
     }
 
@@ -360,5 +366,64 @@ body aside fieldset.search {
 
 .tri-posts details {
     padding: 15px 25px 25px 25px;
+}
+
+.rectangle-speech-border {
+    .rectangle_speech_border();
+}
+
+.example-obtuse {
+    .example_obtuse();
+}
+
+.triangle-border {
+    .triangle_border();
+}
+
+.oval-thought-border {
+    .oval_thought_border();
+}
+
+.oval-thought {
+    .oval_thought();
+}
+
+/*.example_right(#719D00, #AEF100);*/
+.example-right {
+    .example_right(#222,#555);
+}
+
+h1 a, h2 a, h3 a {
+    text-decoration: none;
+}
+
+.splash.normal-read,
+.normal-read .splash {
+    h1, h2, h3 {
+        font-family: "helveticaneue","helvetica neue","helveticaneueroman","helveticaneue-roman","helvetica neue roman","helvetica","arial",'texgyreherosregular',"tahoma","geneva",sans-serif;
+        color: white;
+        font-weight: 700;
+        letter-spacing: -2px;
+        line-height:48px;
+        font-size: 52px;
+    }
+    h2 {
+        line-height: 30px;
+        font-size: 35px;
+        letter-spacing: 0;
+    }
+    h3 {
+        line-height: 22px;
+        font-size: 25px;
+        letter-spacing: 0;
+    }
+}
+
+button.big {
+    .styled_button(#e22092,#e22092);
+}
+
+.etc button.big {
+    .styled_button(@etc_button_color,@etc_button_color);
 }
 
