@@ -126,10 +126,11 @@ article .overhang-base{position:absolute;}
 article .left-overhang{position:absolute;left:-80px;width:80px;text-align:center;}article .left-overhang address,article .left-overhang time,article .left-overhang label,article .left-overhang output{margin:0 auto;}
 article .left-overhang .vertical-text-100{-webkit-transform:rotate(formatstring("{0}deg", 1));-moz-transform:rotate(formatstring("{0}deg", 1));-o-transform:rotate(formatstring("{0}deg", 1));-ms-transform:rotate(formatstring("{0}deg", 1));transform:rotate(formatstring("{0}deg", 1));-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);-ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);position:relative;line-height:2;font-size:1.15em;padding:2px 8px;border:1px solid #bbb;color:white;left:-8px;width:100px;}
 article.with-overhang,article .with-overhang{padding-left:80px;}
-.thirds-content>aside,.fourths-content>aside,.content>aside{color:#333333;background-color:#fffff8;}
-aside.sidebar-1{background-color:#fffff8;}
-aside.sidebar-2{background-color:#fffff8;}
-.asides-background{position:absolute;background-color:#fffff8;height:100%;background-image:url("/images/sitting-pencil-2.png");background-position:bottom right;background-repeat:no-repeat;}
+.thirds-content>aside,.fourths-content>aside,.content>aside{color:#333333;background-color:transparent;}
+aside.sidebar-1{background-color:transparent;}
+aside.sidebar-2{background-color:transparent;}
+.asides-background{position:absolute;background-color:transparent;height:100%;background-image:url("/images/sitting-pencil-2.png");background-position:bottom right;background-repeat:no-repeat;}
+.main{background-image:url("/images/sitting-pencil-2.png");background-position:bottom right;background-repeat:no-repeat;}
 article header b,article footer b,article aside b,section b,article header strong,article footer strong,article aside strong,section strong{font-weight:bold;}
 article header cite,article footer cite,article aside cite,section cite,article header dfn,article footer dfn,article aside dfn,section dfn,article header em,article footer em,article aside em,section em,article header i,article footer i,article aside i,section i{font-style:italic;}
 article header code,article footer code,article aside code,section code,article header kbd,article footer kbd,article aside kbd,section kbd,article header samp,article footer samp,article aside samp,section samp,article header pre,article footer pre,article aside pre,section pre,article header tt,article footer tt,article aside tt,section tt,article header var,article footer var,article aside var,section var{font-family:Monospace,mono-space,monospace;}
