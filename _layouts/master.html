@@ -36,7 +36,24 @@
 
   {% include css_browser_selector.html %}    
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-  <META name="y_key" content="9ffe1e30a0a8e200" />
+{% if site.y_key %}
+  <META name="y_key" content="{{ site.y_key }}" />
+{% endif %}
+  {% if site.analytics_id %}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ site.analytics_id }}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  {% endif %}
 </head>
 
 <!-- http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
