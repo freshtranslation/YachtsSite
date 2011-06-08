@@ -1,5 +1,7 @@
 ---
-layout: blog
+layout: default
+title: About Fresh Translation
+header_title: About Fresh Translation
 ---
 Originally from Venezuela, I lived and studied in the city of Oporto in Portugal for ten years and in 2007 I moved to London to complete my education. I hold a BA (Hons) in Spanish and French combined with Literature from the University of Westminster.  I am a full-time translator who is currently living and working in South America (I split my time between Argentina and Brazil)  and I speak Portuguese, Spanish, English and French. I was lucky enough to have lived between two different continents with huge cultural differences between them and have experimented this change in the first person. 
 
