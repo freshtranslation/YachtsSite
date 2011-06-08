@@ -1,11 +1,8 @@
 ---
 layout: blog-frontpage
+thirds: production
+flawless: production
 title: On A Quest - Fresh Translation
 header_title: On A Quest
 ---
-h1. Title &mdash; h1
-
-{% include lorem_ipsum.html %} 
-
-h2. Subtitle &mdash; h2
 

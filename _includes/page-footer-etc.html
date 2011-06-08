@@ -1,0 +1,42 @@
+<nav class="etc thirds-content normal-read">
+
+	<div class="third">
+			<section class="posts">
+				<h2>Recent Posts</h2>
+
+				{% for post in site.posts limit:4 %}
+			  <h6><a href="{{ post.url }}">{{ post.title }}</a>
+			  <time>{{ post.date | date:"%b %d" }}</time>
+			  </h6>
+				<p>
+				  {{ post.summary | truncatewords:20 }}
+				  <a href="{{ post.url }}">more</a>
+				</p>
+				{% endfor %}
+
+			</section>
+	</div>
+
+	<div class="third">
+			<section>
+<h2>About Fresh Translation</h2>
+<p>
+Fresh Translation is a newly started company founded by Caterine Apruzzese and its aim is to provide a translation service that is accessible and tailored to our customers' specific needs. Originally from Venezuela, I lived and studied in the city of Oporto in Portugal for ten years and in 2007 I moved to London to complete my education.
+</p><p>
+Before running my own translation business, I was working as an in-house translator and a marketing and consumer researcher for a Global company based in London. 
+
+<a href="/more/">More ...</a>
+</p>
+			</section>
+		</div>
+	</div>
+
+	<div class="third">
+			<section>
+				<h2>Stay Informed</h2>
+				<p>Let's send you a summary of our services.
+				We'll occasionally email you when we have more things to offer.</p>
+				{% include mailchimp-stay-informed.html %}
+			</section>
+	</div>
+</nav>

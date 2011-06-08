@@ -1,0 +1,81 @@
+/*
+  spritemapper.sprite_dirs = ./site
+  spritemapper.output_css = site-out-57.css
+*/
+
+.email-clear {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url(site-57/email-clear.png);
+}
+
+.facebook-logo {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url(site-57/facebook-logo.png);
+}
+
+.google-logo {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url(site-57/google-logo.png);
+}
+
+.linked-in {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url(site-57/linked-in.png);
+}
+
+.rss-clear {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url(site-57/rss-clear.png);
+}
+
+.twitter-bird {
+    display: inline-block;
+    width:57px;
+    height:57px;
+    background: url(site-57/twitter-bird.png);
+}
+
+.digg-clear {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url(site-57/digg-clear.png);
+}
+
+.flickr-clear {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url(site-57/flickr-clear.png);
+}
+
+.star-clear {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url(site-57/star-clear.png);
+}
+
+.stumble-upon {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url(site-57/stumble-upon.png);
+}
+
+.network-clear {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background: url(site-57/network-clear.png);
+}

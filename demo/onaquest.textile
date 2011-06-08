@@ -1,0 +1,8 @@
+---
+layout: blog-frontpage
+thirds: development
+flawless: development
+title: On A Quest - Fresh Translation
+header_title: On A Quest
+---
+

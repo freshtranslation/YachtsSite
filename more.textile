@@ -9,5 +9,5 @@ Before running my own translation business, I was working as an in-house transla
 
 "On a Quest To Become a Freelance Translator" is my blog where I share my personal experiences as a freelance translator as well as other curiosities related to the translation Industry. 
 
-You can contact me via email at katty@freshtranslation.com or visit my website www.freshtranslation.com 
+You can contact me via email at {{ site.email }} or visit my website freshtranslation.com 
 
