@@ -1,5 +1,4 @@
 ---
-published:false
 layout: post
 title: When Creation meets Translation 
 author: Caterine Apruzzese
@@ -8,6 +7,7 @@ location: New York
 summary: Many people ask me what the difference between a writer and a translator is and what is the link between translation and communication.
 category:
   - onaquest
+published:false
 ---
 When Creation meets Translation. 
  
