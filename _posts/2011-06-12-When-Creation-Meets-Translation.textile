@@ -7,7 +7,7 @@ location: New York
 summary: Many people ask me what the relationship between a writer and a translator is, so here's my answer to this question; 
 category:
   - onaquest
-published:false
+
 ---
 When Creation Meets Translation. 
  
