@@ -4,7 +4,7 @@ title: How to choose a technical translator
 author: Caterine Apruzzese
 authorurl: /Caterine+Apruzzese
 location: New York 
-Summary: In today's blog post we are giving you some tips that might help you choosing the right *technical translator*. 
+summary: In today's blog post we are giving you some tips that might help you choosing the right *technical translator*. 
 category:
   - onaquest
 ---
