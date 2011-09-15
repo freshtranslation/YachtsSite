@@ -2,7 +2,7 @@
 layout: blog-frontpage
 thirds: production
 flawless: production
-title: On A Quest - Fresh Translation
-header_title: On A Quest
+title: Personal - Motor Speed Yachts
+header_title: Personal
 ---
 
