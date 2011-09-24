@@ -13,7 +13,7 @@ layout: nil
   </url>
   
   <url>
-    <loc>{{ site.url }}/onaquest/</loc>
+    <loc>{{ site.url }}/{{ site.main_category }}/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
